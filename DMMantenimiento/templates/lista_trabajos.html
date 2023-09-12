@@ -1,0 +1,13 @@
+{% extends 'padre.html' %}
+
+
+        
+{% block contenidoQueCambia %}
+    <h1>Vista de Trabajos</h1>
+    <ul>
+         {% for trabajo in lista_trabajos  %}
+            <li>{{trabajo.nombre}}</li>
+        {% endfor %}
+    </ul>    
+
+{% endblock contenidoQueCambia %}
