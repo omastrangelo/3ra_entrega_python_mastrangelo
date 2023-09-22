@@ -1,13 +1,26 @@
 {% extends 'padre.html' %}
 
-
-        
 {% block contenidoQueCambia %}
-   <form action="{% url 'EntregaFormulario' %}" method="post">{% csrf_token %}
-         {{miFormularioEnt.as_p}}
-    <button type="submit">Enviar</button>
 
+<form method="post" action="{% url 'EntregaFormulario' %}">
+   {% csrf_token %}
+   <div class="form-group">
+       <label for="id_nombre">Nombre:</label>
+       <input type="text" class="form-control" id="id_nombre" name="nombre" required>
+   </div>
+   <div class="form-group">
+       <label for="id_fechaDeEntrega">Fecha de Entrega:</label>
+       <input type="date" class="form-control" id="id_fechaDeEntrega" name="fechaDeEntrega" required>
+   </div>
+   <div class="form-group">
+       <label for="id_entregado">Entregado:</label>
+       <input type="checkbox" class="form-check-input" id="id_entregado" name="entregado">
+   </div>
+   <div class="form-group">
+       <label for="id_link">Link:</label>
+       <input type="text" class="form-control" id="id_link" name="link" required>
+   </div>
+   <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
 
-   </form>
 {% endblock contenidoQueCambia %}
-    

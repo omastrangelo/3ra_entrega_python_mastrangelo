@@ -79,7 +79,7 @@ def trabajador_formulario(req):
             return render(req, "inicio.html")
     else:
         miFormularioTrab = TrabajadorFormulario()
-    return render(req, "trabajadorFormulario.html", {"miFormularioTrab": miFormularioTrab})
+        return render(req, "trabajadorFormulario.html", {"miFormularioTrab": miFormularioTrab})
 
 def entrega_formulario(req):
     if req.method == 'POST':
@@ -90,5 +90,5 @@ def entrega_formulario(req):
             entrega.save()
             return render(req, "inicio.html")
     else:
-        miFormularioTrab = TrabajadorFormulario()
-    return render(req, "trabajadorFormulario.html", {"miFormularioTrab": miFormularioTrab})
+        miFormularioEnt = EntregaFormulario()
+        return render(req, "entregaFormulario.html", {"miFormularioEnt": miFormularioEnt})

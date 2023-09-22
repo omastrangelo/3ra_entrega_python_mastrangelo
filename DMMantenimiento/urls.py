@@ -13,6 +13,6 @@ urlpatterns = [
     path('busqueda-trabajo/', busqueda_trabajo,name="BusquedaTrabajo"),
     path('buscar/', buscar ,name="Buscar"),
     path('trabajadorFormulario/', trabajador_formulario,name="TrabajadorFormulario"),
-    path('entregaFormulario/', entrega_formulario,name="EntregaFormulario"),
+    path('entrega_Formulario/', entrega_formulario,name="EntregaFormulario"),
 ]
 
